@@ -46,6 +46,23 @@ public:
         int ans = 0;
 
         while(head){
+            ans = ans | (head -> val);
+            ans = ans<<1;
+            head = head -> next;
+        }
+        
+        return ans / 2;
+    }
+};
+
+// Approach - 3
+
+class Solution {
+public:
+    int getDecimalValue(ListNode* head) {
+        int ans = 0;
+
+        while(head){
             ans = (ans << 1) | (head -> val);
             head = head -> next;
         }
